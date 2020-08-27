@@ -1,0 +1,24 @@
+.play-again-button {
+  padding: 16px;
+  width: 220px;
+  border-radius: 8px;
+  background-color: #fff;
+  font-weight: 600;
+  color: var(--background-2);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  z-index: 80;
+  outline: none;
+  transition: all .3s;
+}
+.play-again-button:focus {
+  outline: none;
+}
+.play-again-button:active {
+  transform: scale(.97);
+}
+.play-again-button:hover {
+  color: var(--rock-color-1);
+}

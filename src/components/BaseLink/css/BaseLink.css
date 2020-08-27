@@ -1,0 +1,19 @@
+.base-link {
+  padding: 14px 34px;
+  color: var(--background-1);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  border-radius: 40px;
+  background-color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform .3s;
+  box-shadow: 0 2px 22px rgba(255, 255, 255, 0.25);
+}
+.base-link:hover {
+  color: var(--rock-color-1);
+}
+.base-link:active{
+  transform: scale(.97);
+}

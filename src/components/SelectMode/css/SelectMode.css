@@ -1,0 +1,14 @@
+.select-mode {
+  padding-top: 25vh;
+}
+.select-mode h1 {
+  font-size: 52px;
+  color: #fff;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.select-mode .base-link {
+  margin-bottom: 30px;
+  width: 300px;
+  text-align: center;
+}

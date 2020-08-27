@@ -1,0 +1,31 @@
+.tbbt-mode-screen {
+  padding: 30px 33px 0;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: url(../../../images/tbbt-bg-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: hsl(45, 98%, 61%);
+}
+.tbbt-mode-screen .header {
+  margin-bottom: 0;
+}
+.tbbt-mode-screen .background-cap {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1024px) {
+  .tbbt-mode-screen {
+    padding: 30px 80px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .tbbt-mode-screen {
+    background-image: url(../../../images/tbbt-bg-desktop.jpg);
+  }
+}
+@media screen and (min-height: 678px) and (min-width: 1024px) {
+  .tbbt-mode-screen {
+    padding-bottom: 150px;
+  }
+}

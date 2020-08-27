@@ -1,0 +1,103 @@
+.standard-mode-screen .options-wrapper {
+  grid-template-columns: repeat(2, 136px);
+  column-gap: 50px;
+  grid-template-rows: repeat(2, 136px);
+  row-gap: 22px;
+  grid-template-areas:
+    "Paper Scissors"
+    " Rock Rock";
+  justify-items: center;
+  place-content: center;
+  position: relative;
+  min-width: 360px;
+  margin-top: 60px;
+}
+.standard-mode-screen .options-wrapper.results {
+  column-gap: 60px;
+  grid-template-areas:
+    "PlayerOne PlayerTwo"
+    "Winner Winner";
+  padding-bottom: 55px;
+}
+
+
+.standard-mode-screen .options-wrapper.results .results-winner {
+  grid-area: Winner;
+}
+.standard-mode-screen .options-wrapper.results .results-winner h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  line-height: 1;
+}
+.standard-mode-screen .options-wrapper .bg-form {
+  width: 200px;
+  display: inline-block;
+  background-image: url(../../../images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 200px;
+  position: absolute;
+  top: 67px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.standard-mode-screen .options-wrapper .option-bg {
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  place-self: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.standard-mode-screen .options-wrapper .option-bg.player-one {
+  grid-area: PlayerOne;
+}
+.standard-mode-screen .options-wrapper .option-bg.player-two {
+  grid-area: PlayerTwo;
+}
+
+@media screen and (min-width: 1024px) {
+  .standard-mode-screen .options-wrapper {
+    grid-template-columns: repeat(2, 204px);
+    column-gap: 78px;
+    grid-template-rows: repeat(2, 204px);
+    row-gap: 38px;
+    grid-template-areas:
+      "Paper Scissors"
+      " Rock Rock";
+    margin-top: 0;
+  }
+  .standard-mode-screen .options-wrapper.results {
+    column-gap: 346px;
+    grid-template-columns: repeat(2, 306px);
+    grid-template-rows: 306px;
+  }
+  .standard-mode-screen .options-wrapper .bg-form {
+    width: 300px;
+    height: 300px;
+    top: 101px;
+  }
+  .standard-mode-screen .options-wrapper .option-bg {
+    width: 250px;
+    height: 250px;
+  }
+  .standard-mode-screen .options-wrapper.results {
+    grid-template-columns: auto 300px  auto;
+    column-gap: 60px;
+    grid-template-areas: "PlayerOne Winner PlayerTwo";
+    max-width: 940px;
+    margin-top: 120px;
+  }
+  .standard-mode-screen .options-wrapper.results .results-winner {
+    place-self: center;
+  }
+  .standard-mode-screen .options-wrapper.results .results-winner h2{
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,65 @@
+.main-screen {
+  padding: 15vh 26px 0;
+  overflow: hidden;
+}
+.main-screen h1 {
+  color: #ffffff;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 52px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 4px;
+}
+.main-screen h1 span::first-letter {
+  font-size: 72px;
+}
+.main-screen h1 span:nth-child(1)::first-letter {
+  color: var(--rock-color-2);
+}
+.main-screen h1 span:nth-child(2)::first-letter {
+  color: var(--paper-color-2);
+}
+.main-screen h1 span:nth-child(3)::first-letter {
+  color: var(--scissors-color-2);
+}
+.main-screen .base-link {
+  font-size: 38px;
+  width: 300px;
+  text-align: center;
+}
+.main-screen h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  text-align: center ;
+}
+.main-screen h2 a {
+  color: #999;
+}
+.main-screen .lang-buttons-wrapper {
+  margin-top:80px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.main-screen .lang-buttons-wrapper button {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  outline: none;
+}
+.main-screen .lang-buttons-wrapper button.EN-lang {
+  background-image: url(../../../images/united-states.svg);
+}
+.main-screen .lang-buttons-wrapper button.ES-lang {
+  background-image: url(../../../images/spain.svg);
+}

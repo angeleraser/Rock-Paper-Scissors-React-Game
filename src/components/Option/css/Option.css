@@ -1,0 +1,227 @@
+.option-button {
+  box-shadow: 0 -6px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 9101998px;
+  width: 134px;
+  height: 134px;
+  cursor: pointer;
+  z-index: 50;
+  position: relative;
+}
+.tbbt-mode-screen .option-button {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 -3px rgba(0, 0, 0, 0.3) inset;
+}
+
+.option:focus {
+  outline: none;
+}
+.options-wrapper.results .option-button > p {
+  display: block;
+  width: 150px;
+  bottom: -30px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  letter-spacing: 1px;
+}
+/*.tbbt-mode-screen .options-wrapper.results .option-button.player-two > p {
+   bottom: -50px;
+}*/
+.option-button > p {
+  display: none;
+}
+
+.option-button .radial-bg {
+  width: 268px;
+  height: 268px;
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  background-image: repeating-radial-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.05) 15%
+  );
+  animation-duration: 0.5s !important;
+  animation-iteration-count: infinite !important;
+}
+.option-button .radial-bg.winner {
+  display: inline-block;
+}
+
+.option-button.rock {
+  background-image: linear-gradient(
+    to top,
+    var(--rock-color-1),
+    var(--rock-color-2)
+  );
+  grid-area: Rock;
+  position: relative;
+  animation-delay: 0.2s;
+}
+.tbbt-mode-screen .option-button.rock {
+  right: 40px;
+}
+
+.option-button.paper {
+  background-image: linear-gradient(
+    to top,
+    var(--paper-color-1),
+    var(--paper-color-2)
+  );
+  grid-area: Paper;
+}
+
+.option-button.scissors {
+  background-image: linear-gradient(
+    to top,
+    var(--scissors-color-1),
+    var(--scissors-color-2)
+  );
+  grid-area: Scissors;
+  position: relative;
+  animation-delay: 0.4s;
+}
+.tbbt-mode-screen .option-button.scissors {
+  top: 45px;
+}
+
+.option-button.lizard {
+  background-image: linear-gradient(
+    to top,
+    var(--lizard-color-1),
+    var(--lizard-color-2)
+  );
+  grid-area: Lizard;
+  position: relative;
+  left: 40px;
+  animation-delay: 0.6s;
+}
+
+.option-button.spock {
+  background-image: linear-gradient(
+    to top,
+    var(--spock-color-1),
+    var(--spock-color-2)
+  );
+  grid-area: Spock;
+  animation-delay: 0.8s;
+}
+.tbbt-mode-screen .option {
+  width: calc(100% - 22px);
+  height: calc(100% - 22px);
+}
+.option {
+  border-radius: 9101998px;
+  position: relative;
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+}
+
+.option::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 9101998px;
+  background-color: var(--option-bg);
+  box-shadow: 0 6px rgba(0, 0, 0, 0.1) inset;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.tbbt-mode-screen .option::after {
+  background-size: 40%;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.option.rock::after {
+  background-image: url(../../../images/icon-rock.svg);
+}
+
+.option.paper::after {
+  background-image: url(../../../images/icon-paper.svg);
+}
+
+.option.scissors::after {
+  background-image: url(../../../images/icon-scissors.svg);
+}
+
+.option.lizard::after {
+  background-image: url(../../../images/icon-lizard.svg);
+}
+
+.option.spock::after {
+  background-image: url(../../../images/icon-spock.svg);
+}
+
+.options-wrapper.results .option-button.player-one {
+  position: static;
+  grid-area: PlayerOne;
+  animation-delay: 0s !important;
+}
+.options-wrapper.results .option-button.player-two {
+  position: static;
+  grid-area: PlayerTwo;
+  animation-duration: 2.5s !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .option-button {
+    width: 202px;
+    height: 202px;
+  }
+  .option {
+    width: calc(100% - 48px);
+    height: calc(100% - 48px);
+  }
+  .option::after {
+    background-size: 40%;
+  }
+  .tbbt-mode-screen .option-button {
+    width: 148px;
+    height: 148px;
+    box-shadow: 0 -6px rgba(0, 0, 0, 0.3) inset;
+  }
+  .tbbt-mode-screen .option {
+    width: calc(100% - 34px);
+    height: calc(100% - 34px);
+  }
+  .tbbt-mode-screen .option::after {
+    box-shadow: 0 6px rgba(0, 0, 0, 0.1) inset;
+  }
+  .tbbt-mode-screen .option-button.scissors {
+    top: 70px;
+  }
+  .option-button.lizard {
+    left: 70px;
+  }
+  .tbbt-mode-screen .option-button.rock {
+    right: 70px;
+  }
+  .option-button.player-one .option,
+  .option-button.player-two .option,
+  .tbbt-mode-screen .option-button.player-one .option,
+  .tbbt-mode-screen .option-button.player-two .option {
+    width: calc(100% - 62px);
+    height: calc(100% - 62px);
+  }
+  .option-button.player-one,
+  .option-button.player-two {
+    width: 302px;
+    height: 302px;
+  }
+  .option-button .radial-bg {
+    width: 580px;
+    height: 580px;
+  }
+  .options-wrapper.results .option-button > p {
+    top: -80px;
+    font-size: 22px;
+    width: 300px;
+  }
+}

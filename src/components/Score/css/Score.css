@@ -1,0 +1,29 @@
+.score {
+  padding: 12px 30px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.score h1 {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--score-text);
+}
+.score h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+@media screen and (min-width: 1024px) {
+  .score {
+    padding: 12px 30px 0;
+  }
+  .score h1 {
+    font-size: 14px;
+    position: relative;
+  }
+  .score h2 {
+    font-size: 42px;
+  }
+}

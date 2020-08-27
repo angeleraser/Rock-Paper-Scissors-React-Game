@@ -1,0 +1,15 @@
+.standard-mode-screen {
+  padding: 30px 33px 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .standard-mode-screen {
+    padding: 30px 80px;
+  }
+}
+
+@media screen and (min-height: 678px) and (min-width: 1024px) {
+  .standard-mode-screen {
+    padding-bottom: 80px;
+  }
+}
