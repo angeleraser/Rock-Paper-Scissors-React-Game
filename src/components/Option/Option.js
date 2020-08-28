@@ -3,6 +3,7 @@ import "./css/Option.css";
 import { useContext } from "react";
 import { GameContext } from "../GameLogic/GameContext";
 import "animate.css";
+import { playerChoiceText } from "../GameLogic/methods";
 const Option = ({ name = "", player = "", loading, animations = "" }) => {
   const {
     dispatch,
@@ -11,6 +12,7 @@ const Option = ({ name = "", player = "", loading, animations = "" }) => {
     results: { winner, done },
     language,
   } = useContext(GameContext);
+  
   const selectOption = () => {
     if (!done) {
       dispatch({
@@ -22,12 +24,6 @@ const Option = ({ name = "", player = "", loading, animations = "" }) => {
       });
     }
   };
-  const playerOneChoice = () =>
-    language.name === "EN" ? `${playerOne.name} picked` : "Elegiste";
-  const playerTwoChoice = () =>
-    language.name === "EN"
-      ? `${playerTwo.name} picked`
-      : `${playerTwo.name} eligió`;
 
   return (
     <div
@@ -43,7 +39,9 @@ const Option = ({ name = "", player = "", loading, animations = "" }) => {
         }`}></div>
       {loading && (
         <p className="absolute">
-          {player === "One" ? playerOneChoice() : playerTwoChoice()}
+          {player === "One"
+            ? playerChoiceText(language.name, playerOne, 1)
+            : playerChoiceText(language.name, playerTwo, 2)}
         </p>
       )}
     </div>

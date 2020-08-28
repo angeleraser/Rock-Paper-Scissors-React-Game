@@ -4,28 +4,32 @@ import { useEffect } from "react";
 
 export const useLoad = (time = 1000) => {
   const isMounted = useRef(true);
-  const [loading, setLoading] = useState(false);
+
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     return () => {
       isMounted.current = false;
     };
   }, []);
-  const load = (con = true) => {
+
+  const load = () => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(con);
+        resolve(false);
       }, time);
     });
   };
 
-  const awaitResult = async (con = true) => {
-    const result = await load(con);
+  const awaitResult = async () => {
+    const result = await load();
     if (isMounted.current) setLoading(result);
   };
+  
   const backToInitialState = (time) => {
     setTimeout(() => {
       if (isMounted.current) {
-        setLoading(false);
+        setLoading(true);
       }
     }, time);
   };
